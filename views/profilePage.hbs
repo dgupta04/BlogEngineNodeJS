@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/stylesheets/profile.css">
+    <title>User profile</title>
+</head>
+<body>
+    <nav>
+        <div class="navContainer">
+            <div class = "navElement" id="navElement1"><span class="logo">Logo</span></div>
+            <div class = "navElement" id="navElement2"><input type="text" name="searchTerm" id="searchTermBar" placeholder="Search..."></div>
+            <div class = "navElement" id="navElement3"><div class="nameContainer"><span class="name">Divyam Gupta</span><span><img src="/img/indexBg.jpg" alt="" id="profImg"></span></span></div>
+            </div>
+        </div>
+    </nav>
+    <div class="searchResultsContainer">
+        {{!-- <div class="searchResult">
+            <span class="userText"><a href='/user/testUser'>@testUser</a></span>
+        </div> --}}
+    </div>
+    <div class="bigContainer">
+        <div class="coverImg"></div>
+        <div class="line"></div>
+        <div class="circularImg"></div>
+        <div class="userInfo">
+            <h1 class="userName"><span>Divyam Gupta</span></h1>
+            {{#unless user.isSelf}}
+                <button class="addFriend">Follow</button>
+            {{/unless}}
+        </div>        
+        <h6 class="userHandle">@{{user.handle}}</h6>
+        <h6 class="friendCount">{{user.numFriends}} friends</h6>
+        <div class="postsHead">
+            <h1 class="heading">
+                Posts
+            </h1>
+        </div>
+        <div class="addPostsContainer">
+            {{#unless posts}}
+            <div class="noTextContainer">
+                <span>No posts yet</span>
+            </div>
+            {{/unless}}
+            {{#if user.isSelf}}
+            <div class="addPostContainer">
+                <div class="textAdd">
+                    <span>Add Post</span>
+                </div>
+            </div>
+            {{/if}}
+        </div>
+        <div class="postsContainer">
+            {{#if posts}}
+                {{#each posts}}
+                    <div class="post">
+                        <div class="postUserInfo">
+                            <div class="profileContainer"><span class="profileLink">{{this.author}}</span></div>
+                            <div class="timeStampContainer"><span class="timeStamp">24 Jun 2019</span></div>
+                        </div>
+                        <div class="postBodyContainer">
+                            <div class="postBody">
+                                <p class="postContent">{{this.body}}</p>
+                            </div>
+                        </div>
+                        <!-- <div class="reactionCount">
+                            <div class="likesCount"></div>
+                            <div class="commentsCount"></div>
+                        </div> -->
+                        <div class="reactionContainer">
+                            {{#if this.isLikedByUser}}
+                            <div class="likeIconContainer"><span class="likeText">Liked</span></div>
+                            {{else}}
+                            <div class="likeIconContainer"><span class="likeText">Like</span></div>
+                            {{/if}}                            
+                            <!-- <div class="commentButtonContainer"><span class="commentButtonText"></span></div> -->
+                        </div>
+                    </div>
+                {{/each}}
+            {{/if}}
+            <!-- <div class="post"></div> -->
+        </div>
+    </div>
+    <div class="postInputContainer">
+        <div class="postAddPanel">
+            <h1 class="postAddHeading">New Post</h1>
+            <div class="postBodyInput">
+                <textarea name="postBody" id="postBodyTextarea" placeholder="What do you want to say?"></textarea>
+            </div>
+            <div class="submitContainer">
+                <button class="submitPost">Post!</button>
+            </div>
+        </div>
+         <div class="exitSignContainer">
+                <div class="leftRotate"></div>
+                <div class="rightRotate"></div>
+        </div>
+    </div>
+    {{!-- <div class="arrowUp"></div> --}}
+    <div class="settingsContainer">        
+        <div class="logoutButton">
+            <a href="/logout"><span>Logout</span></a>
+        </div>
+    </div>
+    {{!-- <div class="blurOverlay"></div> --}}
+    <script src="/js/styling.js"></script>
+</body>
+</html>

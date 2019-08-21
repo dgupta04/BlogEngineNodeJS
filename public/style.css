@@ -1,0 +1,11 @@
+#user:focus{
+    outline: 0;
+}
+
+.exists{
+    border: 1px solid red;
+}
+
+.nope{
+    border: 1px solid green;
+}

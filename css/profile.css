@@ -1,0 +1,463 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,400,900&display=swap');
+
+
+
+nav{
+    position: fixed;
+    /* display: block; */
+    top: 0;
+    width: 100%;
+    height: 10vh;
+    background-color: white;
+    box-shadow: 0px 1px 2px 2px rgba(0,0,0,0.2);
+    z-index: 2;
+}
+
+.navContainer{
+    height: 100%;
+    width: 100%;
+}
+
+.navElement{
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    line-height: 10vh;    
+}
+
+.imgContainer, .nameContainer{
+    display: inline-block;
+}
+
+#navElement1{
+    left: 1vw;
+}
+
+#navElement2{
+    left: 39.375vw;
+    width: 21.25vw;
+}
+
+#searchTermBar{
+    width: 20vw;
+    height: 3vh;
+    padding: 1.25vh;
+    outline: none;
+    border-radius: 3px;
+    border: 3px solid #777;
+    font-size: 0.75em;
+    text-align: center;
+}
+
+#searchTermBar::placeholder{
+    font-family: Montserrat;
+    font-weight: lighter;
+    font-size: 1.1em;
+    color: #777;
+}
+
+#searchTermBar:focus{
+    background-color: #ddd;
+}
+
+#navElement3{
+    left: 40vw;
+    width: 40vw;
+}
+
+.searchResultsContainer{
+    position: fixed;
+    display: none;
+    /* height: calc(20vw + 2.5vh); */
+    width: calc(20vw + 2.5vh);
+    background-color: rgba(255,255,255,0.9);
+    /* border-top: 1px solid #2ecc81; */
+    overflow-y: scroll;
+    top: calc(8vh + 3px);
+    left: 42.5vw;
+    z-index: 10;
+}
+
+.searchResult{
+    position: relative;
+    height: 8vh;
+    width: 100%;
+    background: transparent;
+    z-index: inherit;
+    line-height: 8vh;
+    text-align: center;
+}
+
+.nameContainer{
+    position: relative;
+    width: 16vw;
+    left: 17.5vw;
+    text-align: center;
+    /* margin: 0 auto; */
+}
+
+.nameContainer:hover{
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+.name{
+    position: relative;
+    margin-right: 1vw;
+}
+
+#profImg{
+    position: relative;
+    top: 1.3vh;
+    height: 5vh;
+    width: 5vh;
+    border-radius: 100%;
+}
+
+.bigContainer{
+    position: relative;
+    height: 90vh;
+    top: 10vh;
+    background-color: #ddd;
+    overflow-y: scroll;
+}
+
+.coverImg{
+    position: absolute;
+    /* top: vh; */
+    height: 28vh;
+    width: 100%;
+    background: url('/img/indexBg.jpg');
+}
+
+.line{
+    position: relative;
+    width: 100%;
+    height: 2vh;
+    top: 28vh;
+    background-color: #fff;
+}
+
+.circularImg{
+    position: relative;
+    height: 25vh;
+    width: 25vh;
+    background: url('/img/indexBg.jpg');
+    border: 2vh solid white;
+    border-radius: 100%;
+    top: 15.5vh;
+    left: 10vh;
+}
+
+.circularImg:hover{
+    cursor: pointer;
+}
+
+.userName, .addFriend, .alreadyFriends{
+    position: relative;
+    display: inline-block;
+}
+
+.userName, .userHandle, .friendCount{
+    position: relative;
+    top: 2vh;
+    left: 21.5vw;
+}
+
+.userHandle, .friendCount{
+    display: inline-block;
+    font-size: 1em;
+    opacity: 0.5;
+    top: 2.5vh;
+}
+
+.userName{
+    font-size: 3em;
+}
+
+.friendCount{
+    left: 25vw;
+}
+
+.addFriend, .alreadyFriends{
+    top: 0.5vh;
+    height: 5vh;
+    padding: 1.5vh;
+    width: 7.5vw;
+}
+
+.postsHead{
+    position: relative;
+    top: 10vh;
+    width: 50vw;
+    left: 25vw;
+    text-align: center;
+}
+
+.heading{
+    font-size: 2.75em;
+}
+
+.postsContainer{
+    position: relative;
+    top: 13vh;
+    width: 50vw;
+    margin: 0 auto 10vh auto;
+    /* background-color: #123; */
+}
+
+.post{
+    position: relative;
+    width: 100%;
+    /* height: 50vw; */
+    margin-top: 10vh;
+    /* top: 10vh; */
+    background-color: #123;
+}
+
+.postUserInfo{
+    position: relative;
+    width: 100%;
+    height: 7.5vh;
+    background-color: white;
+}
+
+.profileContainer, .timeStampContainer{
+    position: absolute;
+    display: inline-block;
+    height: 100%;
+    line-height: 7.5vh;
+}
+
+.profileContainer{
+    left: 2vw;
+}
+
+.profileLink{
+    font-weight: 900;
+}
+
+.timeStampContainer{
+    position: absolute;
+    left: auto;
+    right: 2vw;
+}
+
+.postBodyContainer{
+    position: relative;
+    width: 100%;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    /* height: 40vh; */
+    background-color: #123;
+   
+}
+
+.postBody{
+    position: relative;
+    margin: 0 auto;
+    color: white;
+    width: calc(100% - 4vw);
+    /* text-align: justify; */
+    /* word-break: break-all; */
+}
+
+.reactionContainer{
+    position: relative;
+    width: 100%;
+    height: 6vh;
+    background-color: red;
+}
+
+.likeIconContainer{
+    position: relative;
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+    height: 100%;
+    line-height: 6vh;
+    width: 20vw;
+}
+
+.likeIconContainer:hover{
+    background-color: maroon;
+    cursor: pointer;
+}
+
+.addPostsContainer{
+    position: relative;
+    width: 50vw;
+    margin: 0 auto;
+    text-align: center;
+    top: 15vh;
+}
+
+.noTextContainer{
+    position: relative;
+    width: 100%;
+    font-size: 1.5em;
+    height: 6vh;
+}
+
+.addPostContainer{
+    position: relative;
+    /* top: 3vh; */
+    color:  blue;
+}
+
+.textAdd>span:hover{
+    cursor: pointer;
+}
+
+.postInputContainer{
+    display: none;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.postAddPanel{
+    position: fixed;
+    z-index: 1000;
+    top: 0vh;
+    height: 80vh;
+    width: 80vh;
+    margin-top: 10vh;
+    left: calc(50% - 40vh);
+}
+
+.postBodyInput, .submitContainer{
+    top: 15vh;
+    position: absolute;
+    width: 80vh;
+}
+
+.submitContainer{
+    top: 70vh;
+}
+
+.submitPost{
+    position: absolute;
+    height: 5vh;
+    width: 20vh;
+    left: calc(50% - 10vh); 
+}
+
+#postBodyTextarea{
+    position: relative;
+    font-size: 1em;
+    margin: 0 auto;
+    padding: 2.5vh;
+    height: 40vh;
+    width: 60vh;
+    left: 7.5vh;
+    resize: none;
+    outline: none;
+    border: none;
+}
+
+.exitSignContainer{
+    position: absolute;
+    right: 2vh;
+    top: 2vh;
+    height: 10vh;
+    width: 10vh;
+}
+
+.exitSignContainer:hover{
+    cursor: pointer;
+}
+
+.exitSignContainer:hover>.rightRotate, .exitSignContainer:hover>.leftRotate{
+    background-color: red;
+}
+
+.rightRotate, .leftRotate{
+    position: absolute;
+    height: 1vh;
+    width: 5vh;
+    background-color: #fff;
+    top: 4vh;
+    left: 2.5vh;
+    transition: background-color 0.365s;
+}
+
+.rightRotate{
+    transform: rotateZ(45deg);
+}
+
+.leftRotate{
+    transform: rotateZ(-45deg);
+}
+
+.postAddHeading{
+    /* position: absolute; */
+    color: white;
+    text-align: center;
+    font-size: 3em;
+    letter-spacing: 0.05em;
+}
+
+.blur{
+    filter: blur(15px);
+}
+
+.settingsContainer{
+    position: fixed;
+    display: none;
+    width: 20vw;
+    height: 8vh;
+    background: transparent;
+    text-align: center;
+    top : 10vh;
+    right: 0;
+    z-index: 10;
+    /* box-shadow: 0px 0px 100px 1px rgba(255,255,255,0.5); */
+}
+
+.arrowUp{
+    position: fixed;
+    display: none;
+    top: 8vh;
+    right: calc(10vw - 2vh);
+    width: 0; 
+    height: 0; 
+    background: transparent;
+    border-left: 2vh solid transparent;
+    border-right: 2vh solid transparent;    
+    border-bottom: 3.5vh solid white;
+}
+
+.logoutButton{
+    position: relative;
+    background-color: #fff;
+    /* top: 0.5vh; */
+    width: 90%;
+    height: 8vh;
+    margin: 0 auto;
+    line-height: 8vh;
+}
+
+.logoutButton:hover{
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+a:active, a:hover, a:visited, a:focus, a{
+    display: block;
+    color: black;
+    text-decoration: none;
+}
+
+.displaySettings{
+    display: block;
+}

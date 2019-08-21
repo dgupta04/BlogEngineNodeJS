@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat;
+}
+
+body{
+    background: url('/img/indexBg.jpg');
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,400,900&display=swap');
+
+.formsContainer{
+    position: relative;
+    width: 75vw;
+    height: 50vh;
+    /* background-color: black; */
+    margin: 25vh auto 0 auto;
+}
+
+.innerContainer{
+    /* display: inline-block; */
+    position: relative;
+    margin: 0 auto;
+    top: -2%;
+    width: 80%;
+}
+
+.signUpContainer, .loginContainer{
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+    width: 25vw;
+    top: 5%;
+}
+
+.orCont{
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    color: white;
+    top: -15vh;
+    width: 10vw;
+}
+
+/* #user{ */
+    /* margin-top: %; */
+/* } */
+
+input{
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 9%;
+}
+
+.user, .pass, .userLogin, .passLogin{
+    height: calc(5vh - 10px);
+    /* border-radius: 10px; */
+    color: #fff;
+    width: 15vw;
+    padding: 10px;    
+    outline: none;
+    border: none;
+    font-size: 14px;
+    border-bottom: 2px solid #fff;
+    /* opacity: 0.2; */
+    background-color: transparent;
+    transition: border-bottom 0.3s;
+}
+
+.user{
+    height: calc(5vh - 9px);
+}
+
+/* input[type=text]:focus, input[type=password]:focus{
+    border-bottom: 2px solid #fff;
+} */
+
+input[type=text]:focus::-webkit-input-placeholder, input[type=password]:focus::-webkit-input-placeholder{
+    color: #fff;
+}
+
+.signUpHead, .loginHead{
+    display: block;
+    position: relative;
+    text-align: center;
+    font-size: 3em;
+    /* color: white; */
+    /* border-bottom: 2px solid #2ecc81; */
+    font-family: Montserrat;
+    color: #fff;
+
+}
+
+.submit , .submitLogin{
+    height: 5vh;
+    color: #fff;
+    width: 100px;
+    background-color: transparent;
+    border: 3px solid #fff;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.submit:hover, .submitLogin:hover{
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+}
+
+.submit:disabled{
+    border: 3px solid #aaa;
+    color: #aaa;
+}
+/* 
+.loginHead{
+    top: 0.7em;
+} */
+
+/* .loginContainer{
+    top: 2em;
+} */
+
+input[type=text]::-webkit-input-placeholder, input[type=password]::-webkit-input-placeholder{
+    font-size: 12px;
+    transition: color 0.3s;
+    font-weight: 100;
+}
+
+.exists{
+    border-bottom: 2px solid red;
+    /* box-sizing: border-box; */
+}
+
+.nope{
+    border-bottom: 2px solid #ddd;
+}
+
+@media(max-width: 800px){
+    .signUpContainer, .orCont, .loginContainer{
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .submit, .submitLogin{
+        top: 1vh;
+    }
+    .formsContainer{
+        margin: 5vh auto 0 auto;
+        width: 100%;
+    }
+    .loginContainer{
+        top: 6vh;
+    }
+    .user, .pass, .userLogin, .passLogin{
+       width: 40vw;
+       margin-top: 4vh;
+    }
+    .orCont{
+        display: none;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1000px){
+    .formsContainer{
+        margin: 5vh auto 0 auto;
+        width: 100%;
+    }  
+    .signUpContainer, .orCont, .loginContainer{
+        display: block;
+        margin: 0 auto;
+    }
+    .submit, .submitLogin{
+        top: 1vh;
+    }
+    .orCont{
+        top: 7.5vh;
+    }
+    .loginContainer{
+        top: 10vh;
+    }
+    .user, .pass, .userLogin, .passLogin{
+        width: 20vw;
+        margin-top: 3vh;
+     }
+}
